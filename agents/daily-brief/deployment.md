@@ -5,7 +5,7 @@ environment_id: ./environment.yaml
 schedule:
   type: cron
   expression: "32 7 * * 1-5"      # weekdays at 07:32 in the time zone below
-  timezone: YOUR_TIMEZONE          # IANA name, e.g. Europe/Paris
+  timezone: Europe/Paris
 vault_ids: []                      # YOUR_VAULT_ID: paste the vlt_... ID from claude-lock.json after applying vault.yaml
 resources:
   - type: memory_store
@@ -25,6 +25,6 @@ budget:
 
 Write today's brief.
 
-The reader's time zone is YOUR_TIMEZONE. Compute every date, including "today", in that zone.
+The reader's time zone is Europe/Paris. Compute every date, including "today", in that zone.
 
 Follow your run steps in order. Title today's edition "Daily brief, <weekday> <day> <month>", written in the language set in the preferences.
