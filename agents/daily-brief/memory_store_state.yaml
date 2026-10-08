@@ -1,0 +1,5 @@
+name: state
+description: >-
+  The daily-brief agent's own working state between runs: bookmarks.json (newest item read
+  per source), ledger.md (items already reported and their last status), notes.md (how each
+  source behaves), proposals.md (suggested preference changes) and runs/<date>.md (one record per run).

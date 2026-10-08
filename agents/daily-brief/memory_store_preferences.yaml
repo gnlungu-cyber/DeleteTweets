@@ -1,0 +1,5 @@
+name: preferences
+description: >-
+  The reader's preferences for the daily brief, in preferences.md: the Slack channels
+  and GitHub repositories to read, the destination channel, the language and length cap,
+  and topics to leave out. Written by the reader; read-only to the agent.
