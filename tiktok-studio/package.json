@@ -1,0 +1,15 @@
+{
+  "name": "tiktok-studio",
+  "version": "1.0.0",
+  "description": "Pipeline de création de vidéos TikTok verticales avec des sous-agents Claude Code. Ouvrir Claude Code **dans ce dossier** pour charger `CLAUDE.md` (la charte) et `.claude/agents/`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "playwright": "^1.64.0"
+  }
+}

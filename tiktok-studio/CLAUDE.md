@@ -58,3 +58,11 @@ Affichées en petit, police discrète (sans-serif fine, environ 22-26 px en 1080
 - Écrit pour **ElevenLabs** (modèle à confirmer par l'utilisateur, « v4 ») avec des **balises d'audio** entre crochets, par exemple `[confident]`, `[excited]`, `[curious]`, `[serious]`, `[short pause]`.
 - **Pas de `[sighs]` ni de `[whispers]`**, sauf si c'est vraiment justifié par le sens, et dans ce cas on le signale.
 - **Narration cohérente et continue** : une seule voix, un seul ton de fond, aucune coupure audible. Le script est accompagné des conseils pour obtenir cet effet (voir l'agent `scenariste`).
+
+## Outils installés
+
+- **Remotion** (skills `remotion-*`, route principale) et **HyperFrames/GSAP** (skills `hyperframes-*`, `motion-graphics`) dans `.claude/skills/`, verrouillés par `skills-lock.json`.
+- **Plugin `claude-animation`** (dessin à la main sur canvas Node, sons synthétisés) : ses personnages tout faits (chibi, bean, critter, bug, ant) et son style chiptune sont **interdits** par cette charte (rendu enfantin). On peut seulement s'en servir pour des techniques ponctuelles (textures, plumes, tracés), si le résultat passe le contrôle qualité. Pour le son, la bibliothèque `assets/sfx/` passe avant les sons synthétisés.
+- Audio : Python avec `numpy`, `librosa`, `soundfile` (analyse de la voix, repérage des temps forts pour caler les animations), plus `ffmpeg` (accélération avec `atempo`, mixage).
+- Captures et vérification : Playwright. Dans la session cloud, lancer Chromium avec `executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome'` et ne pas lancer `playwright install`.
+- Modèle : Claude Opus 5.5, effort `xhigh` pour les itérations et `max` pour les vidéos phares.
